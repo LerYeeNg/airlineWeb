@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+     <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="description" content="Flight Enquire" />
+            <meta name="keywords" content="html, css, enquire, flight, airline, booking" />
+            <meta name="author" content="Ler Yee Ng" />
+            <link href="styles/style.css" rel="stylesheet"/>
+            <link href="styles/responsive.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+            <script src="script/part2.js"></script>
+            <title>Penang Airways Official Website: Fix_order</title>
+        </head>
+        <body>
+            <header>
+    <div id= "Penang">
+    <a href="index.php">
+        <h1>
+            <img src="images/header.png" alt="logo" title="Penang Airways" width="150" height="100" />
+            Penang Airways
+        </h1>
+    </a>
+    </div>
+</header><nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="product.php">Our Flight</a></li>
+        <li><a href="enquire.php">Enquire</a></li>
+        <li><a href="payment.php">Payment</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="enhancements.php">Enhancement</a></li>
+        <li><a href="enhancements2.php">Enhancement 2</a></li>
+        <li><a href="manage.php">Manage</a></li>
+    </ul>
+</nav>           
+            
+            <section id="enquireForm">  
+               <p>INVALID FORM </p><p>Please enter first name. </p><p>Please enter last name. </p><p>Email is not valid.</p><p>Please enter street address. </p><p>Please enter your postcode. </p><p>Please enter your phone number. </p><p>Please enter number of passengers. </p><p>Please select your preference contanct. </p><p>Please select your card type. </p><p>The name on credit card entered is invalid. </p><p>The credit card number entered is invalid. </p><p>The credit card has expired, please use a valid card. </p>                <h2>Book a flight with us today!</h2>
+                <form method="post" action="process_order.php" novalidate="novalidate">
+               <fieldset>
+                    <legend> <h3>Booking Form<img src= "images/booking.png" alt="question" title="Book Now" /></h3></legend>
+                    <h4>Trip</h4>
+                    <div id="detail">
+                         <p>
+                              <label for="oneWay">One Way</label> 
+                              <input type="radio" id="oneWay" name="trip" value="one way"    />
+                         </p>
+                         <p>
+                              <label for="return">Return</label> 
+                              <input type="radio" id="return" name="trip" value="return"    />
+                         </p>
+                         
+                    <p><label for="from">From</label> 
+                         <select name="from" id="from">
+                             <option value="Adelaide" >Adelaide (ADL)</option>			
+                              <option value="Brisbane" >Brisbane (BNE)</option>
+                         	<option value="Canberra" >Canberra (CBR)</option>
+                              <option value="Darwin" >Darwin (DRW)</option>
+                          	<option value="GoldCoast" >Gold Coast (OOL)</option>
+                              <option value="Hobart" selected="selected">Hobart (HBA)</option>
+                              <option value="Melbourne" >Melbourne - Tullamarine (MEL)</option>
+                         	<option value="Perth" >Perth (PER)</option>
+                         	<option value="Sydney" >Sydney (SYD)</option>
+                         </select>
+                    </p>
+                    
+                    <p><label for="to">To</label> 
+                         <select name="to" id="to">
+                              <option value="Adelaide" >Adelaide (ADL)</option>			
+                              <option value="Brisbane" >Brisbane (BNE)</option>
+                         	<option value="Canberra" >Canberra (CBR)</option>
+                              <option value="Darwin" >Darwin (DRW)</option>
+                          	<option value="GoldCoast" selected="selected">Gold Coast (OOL)</option>
+                              <option value="Hobart" >Hobart (HBA)</option>
+                              <option value="Melbourne" >Melbourne - Tullamarine (MEL)</option>
+                         	<option value="Perth" >Perth (PER)</option>
+                         	<option value="Sydney" >Sydney (SYD)</option>
+                         </select>
+                    </p>
+                    
+                    <p><label for="departureDate">Departure Date</label> 
+                         <input type="date" name= "departureDate" id="departureDate" required="required" value="2018-10-30"/>
+                    </p>
+                    
+                   
+                    <p><label for="returnDate">Return Date</label> 
+                         <input type="date" name= "returnDate" id="returnDate" value="0000-00-00"/>
+                    </p>
+                    
+                    <p>
+                         <label for="noPassengers">Number of Passengers</label> 
+                         <input type="text" name= "noPassengers" id="noPassengers" required="required"  class="error" value="" />
+                    </p>
+                   </div>                                                                   
+                   <!-- <div id="price"><p>Total Price</p></div>  -->
+               
+                         <h3> Your details <img src= "images/customer.png" alt="customer" title="your details" /></h3>
+                         <p>
+                              <label for="firstname">First Name</label> 
+                              <input type="text" name= "firstname" id="firstname" class="error"  value=""/>
+     
+                         </p>
+                         <p>
+                              <label for="lastname">Last Name</label> 
+                              <input type="text" name= "lastname" id="lastname" size="30" pattern="^[a-zA-Z]{2,25}$" class="error" value="" />
+                              
+                         </p>
+                         <p>
+                              <label for="email">Email</label>
+                              <input type="email" name= "email" id="email" class="error" value="" />
+                         </p>
+                         <fieldset id="subfield">
+                              <legend>Address</legend>
+                             <p><label for="StreetAdd">Street address</label> 
+                                 <input type="text" id="StreetAdd" name="StreetAdd" size="50" pattern="^[#./0-9a-zA-Z\s,-]{2,40}$" class="error" value="" />
+                             </p>
+                             <p><label for="suburb">Suburb/ town</label> 
+                                 <input type="text" id="suburb" name="suburb" size="30" pattern="^[#./0-9a-zA-Z\s,-]{2,20}$" value=""  />
+                             </p> 
+                             <p><label for="state">State</label> 
+                                 <select name="state" id="state">
+                                   <option value="VIC" selected="selected">VIC</option>			
+                                   <option value="NSW" >NSW</option>
+                                 	<option value="QLD" >QLD</option>
+                                 	<option value="NT" >NT</option>
+                                 	<option value="WA" >WA</option>
+                                 	<option value="SA" >SA</option>
+                                 	<option value="TAS" >TAS</option>
+                                   <option value="ACT" >ACT</option>
+                                 </select>
+                             </p>
+                             <p><label for="postcode">Postcode</label> 
+                                 <input type="text" id="postcode" name="postcode" size="10" pattern="^[0-9]{4}$" class="error" value="" />
+                             </p>
+                             <h4>Billing address different from home address?</h4>
+                              <p>
+                                   <label for="yes">Yes</label> 
+                                   <input type="checkbox" id="yes" name="billingAddress" value="yes" />
+                              </p>
+                              
+                              <div id= "bill">
+                              <h5>Billing Address</h5>
+                              <p><label for="BstreetAdd">Street address</label> 
+                                 <input type="text" id="BstreetAdd" name="BstreetAdd" size="50" pattern="^[#./0-9a-zA-Z\s,-]{2,40}$" value="" />
+                             </p>
+                             <p><label for="Bsuburb">Suburb/ town</label> 
+                                 <input type="text" id="Bsuburb" name="Bsuburb" size="30" pattern="^[#./0-9a-zA-Z\s,-]{2,20}$"  value=""/>
+                             </p> 
+                             <p><label for="Bstate">State</label> 
+                                 <select name="Bstate" id="Bstate">
+                                  <option value="VIC" >VIC</option>			
+                                   <option value="NSW" >NSW</option>
+                                 	<option value="QLD" >QLD</option>
+                                 	<option value="NT" >NT</option>
+                                 	<option value="WA" >WA</option>
+                                 	<option value="SA" >SA</option>
+                                 	<option value="TAS" >TAS</option>
+                                   <option value="ACT" >ACT</option>
+                                 </select>
+                             </p>
+                             <p><label for="Bpostcode">Postcode</label> 
+                                 <input type="text" id="Bpostcode" name="Bpostcode" size="10" pattern="^[0-9]{4}$" value="" />
+                             </p>
+                             </div>
+                         </fieldset>
+                         
+                         <p>
+                             <label for="phone">Phone Number</label>
+                             <input type="text" name= "phone" id="phone" size="12" pattern="^[0-9]{10}$" placeholder="xxxxxxxxxx" class="error" value=""/>
+                         </p>
+                    
+                           <p><label for="preContact">Preferred contact</label> 
+                                 <select name="preContact" id="preContact" class="error">
+                                    <option value="" selected="selected"> Please Select</option>
+                                   <option value="email" >Email</option>			
+                                   <option value="post" >Post</option>
+                                 	<option value="phone" >Phone</option>
+                                 </select>
+                         </p>
+                         
+                    
+                  
+                         <!--<p> Product enquire option
+                             <select name="product" id="product" required="required">
+                             <option value="">Please Select</option>
+                             <option value="booking">Flight booking</option>
+                             <option value="deals">Deals / Promotions</option>
+                             <option value="baggage">Baggage</option>
+                             <option value="flightService">In flight services</option>
+                             <option value="other">Other</option>
+                             </select>
+                          </p>
+                    
+                         <fieldset class=subfield>  
+                         <legend>Product features</legend>
+                         <p>Select which features are the most important to you:</p>
+                         <p><label for="service">Service</label> 
+                             <input type="checkbox" id="service" name="category[]" value="service" checked="checked"/>
+                         </p>
+                         <p><label for="entertainment">Entertainment</label> 
+                             <input type="checkbox" id="entertainment" name="category[]" value="entertainment"/>
+                         </p>
+                         <p><label for="meals">Meals</label> 
+                             <input type="checkbox" id="meals" name="category[]" value="meals"/>
+                         </p>
+                         <p><label for="seat">Seat</label> 
+                             <input type="checkbox" id="seat" name="category[]" value="seat"/>
+                         </p>
+                         <p><label for="kids">Kids-friendly</label> 
+                             <input type="checkbox" id="kids" name="category[]" value="kids"/>
+                         </p>
+                         </fieldset> -->
+                         <p><label for="comments">Comments</label>
+                             <textarea id="comments" name="comments" rows="15" cols="150" ></textarea>
+                         </p>
+            
+                         <!--<fieldset>
+                        <legend><p>Please check your booking details and proceed to payment to complete your booking</p></legend>
+                        
+                         <h4>Your Booking</h4>
+                         <p>Your Name:   </p>
+                         <p>From: Hobart, To: GoldCoast</p>
+                         <p>Depart on: 2018-10-30 </p>
+                         <p>Number of passenger:  </p>
+                         <p>Total Cost: $0</p>
+          		
+                        <input type="hidden" name="trip" id="trip" />
+                        <input type="hidden" name="from" id="from"/>
+                        <input type="hidden" name="to" id="to"  />
+                        <input type="hidden" name="departureDate" id="departureDate"  />
+                        <input type="hidden" name="returnDate" id="returnDate"  />
+                        <input type="hidden" name="noPassengers" id="noPassengers" />
+                        <input type="hidden" name="firstname" id="firstname" />
+                        <input type="hidden" name="lastname" id="lastname" />
+                        <input type="hidden" name="email" id="email" />
+                        <input type="hidden" name="StreetAdd" id="StreetAdd" />
+                        <input type="hidden" name="suburb" id="suburb" />
+                        <input type="hidden" name="state" id="state" />
+                        <input type="hidden" name="postcode" id="postcode" />
+                        <input type="hidden" name="BstreetAdd" id="BstreetAdd" />
+                        <input type="hidden" name="Bsuburb" id="Bsuburb" />
+                        <input type="hidden" name="Bstate" id="Bstate" />
+                        <input type="hidden" name="Bpostcode" id="Bpostcode" />
+                        <input type="hidden" name="phone" id="phone" />
+                        <input type="hidden" name="preContact" id="preContact" />
+                        <input type="hidden" name="comments" id="comments" />-->
+          </fieldset>
+            
+                    <div id= "payment">
+                    <fieldset>
+                         <legend> <h3>Payment details<img src= "images/card.png" alt="card" title="Payment" /></h3></legend>
+                         <h4>Credit card type</h4>
+                         <p>
+                              <label for="visa">Visa</label> 
+                              <input type="radio" id="visa" name="cardType" value="visa" />
+                         </p>
+                         <p>
+                              <label for="mastercard">Mastercard</label> 
+                              <input type="radio" id="mastercard" name="cardType" value="mastercard"/>
+                         </p>
+                         <p>
+                              <label for="americanExpress">American Express</label> 
+                              <input type="radio" id="americanExpress" name="cardType" value="americanExpress"/>
+                         </p>
+                    
+                         <p>
+                              <label for="nameOnCard">Name on credit card</label> 
+                              <input type="text" name= "nameOnCard" id="nameOnCard" size="40" class="error" />
+                          </p>
+                    
+                         <p>
+                              <label for="cardNumber">Credit card number</label> 
+                              <input type="text" name= "cardNumber" id="cardNumber" size="19" class="error"  />
+                         </p>
+                    
+                         <p>
+                              <label for="cardExpiry">Credit card expiry date</label> 
+                              <input type="text" name= "cardExpiry" id="cardExpiry"  placeholder="mm-yy" class="error" />
+                         </p>
+                    
+                         <p>
+                              <label for="cvv">Card verification value (CVV)</label> 
+                              <input type="text" name= "cvv" id="cvv"    />
+                         </p>
+                    </fieldset>
+               
+                    <input type= "submit" value="Check Out"/>
+                    <button type="button" id="cancelButton">Cancel Order</button>
+                    </div>
+               </form>
+            </section>
+            <footer>
+    <p>101991752</p>
+    <p>&#169; Penang Airways 2018</p>
+    <p><a href="mailto:101991752@student.swin.edu.au"><em>Ler Yee Ng</em></a></p>
+</footer>        </body>
+     </html>

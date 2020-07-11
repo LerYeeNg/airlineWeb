@@ -1,0 +1,104 @@
+/*
+ filename:Ler Yee Ng
+ author: Ler Yee Ng
+ created:23/08/2018
+ last modified:23/08/2018
+ description:Enhancement Assignment 1 css
+ */
+ 
+@media screen and (min-width: 31.25em) {
+    p{
+        font-size: 90%;
+    }
+    
+    nav ul li{
+        width: 33%;
+    }
+    
+    #flightService1, #flightService2, #flightService3{
+        width: 43%;
+    }
+   
+    section {
+        min-width: 600px;
+    }
+    
+    .topleft {
+        min-width: 400px;
+    }
+    
+    #id dt {
+        clear: left;
+        float: left;
+        margin-left: 50%;
+    }
+
+    #id dd{
+        font-size: 50%;
+    }
+    
+    aside{
+         width: 20%;
+    }
+    
+    .tt {
+        min-width: 400px;
+    }
+    
+    .enhancement p{
+    font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+     p{
+        font-size: 85%;
+    }
+    
+    header h1{
+        font-size:48px;
+        padding: 0;
+        text-align: center;
+    }
+    nav ul li{
+        width: 50%;
+    }
+        
+     #flightService1, #flightService2, #flightService3{
+        width: 80%;
+        float: none;
+        margin: 0;
+    }
+   
+    img {
+        display: block;
+        margin:0 auto;
+    }
+    
+    section {
+        min-width: 200px;
+    }
+    
+    #id dt {
+        clear: left;
+        float: left;
+        margin-left: 40%;
+    }
+
+    #id dd{
+        font-size: 50%;
+    }
+    
+    aside{
+         width: 15%;
+    }
+    
+    
+    .tt {
+        min-width: 200px;
+    }
+    
+    .enhancement p{
+    font-size: 90%;
+    }
+}

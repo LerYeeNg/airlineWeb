@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+     <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="description" content="Flight Payment" />
+            <meta name="keywords" content="html, css, payment, flight, airline, booking" />
+            <meta name="author" content="Ler Yee Ng" />
+            <link href="styles/style.css" rel="stylesheet"/>
+            <link href="styles/responsive.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+            <script src="script/part2.js"></script>
+            <!--<script src="script/enhancements.js"></script>-->
+            <title>Penang Airways Official Website: Payment</title>
+        </head>
+        <body>
+            <header>
+                <div id= "Penang">
+                    <a href= "index.html">
+                        <h1>
+                            <img src="images/header.png" alt="logo" title="Penang Airways" width="150" height="100" />
+                            Penang Airways
+                        </h1>
+                    </a>
+                </div>
+            </header>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Our Flight</a></li>
+                    <li><a href="enquire.html">Enquire</a></li>
+                    <li><a class="active" href="payment.html">Payment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="enhancements.html">Enhancement</a></li>
+                    <li><a href="enhancements2.html">Enhancement 2</a></li>
+                </ul>
+            </nav>
+            
+            
+            <section id="paymentPage">
+            <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+               <fieldset>
+                    <legend><h3>Please check your booking details and proceed to payment to complete your booking</h3></legend>
+                    <h4>Your Booking</h4>
+               	<p>Your Name: <span id="confirm_name"></span></p>
+                    <p>From: <span id="confirm_departure"></span>, To: <span id="confirm_arrival"></span></p>
+          		<p>Depart on: <span id="confirm_leaveDate"></span></p>
+          		<p>Number of passenger: <span  id="confirm_noPass"></span></p>
+          		<p>Total Cost: $<span  id="confirm_price"></span></p>
+          		
+          		<input type="hidden" name="trip" id="trip" />
+          		<input type="hidden" name="from" id="from"/>
+          		<input type="hidden" name="to" id="to"  />
+          		<input type="hidden" name="departureDate" id="departureDate"  />
+                    <input type="hidden" name="returnDate" id="returnDate"  />
+          		<input type="hidden" name="noPassengers" id="noPassengers" />
+                    <input type="hidden" name="firstname" id="firstname" />
+          		<input type="hidden" name="lastname" id="lastname" />
+                    <input type="hidden" name="email" id="email" />
+          		<input type="hidden" name="StreetAdd" id="StreetAdd" />
+                    <input type="hidden" name="suburb" id="suburb" />
+                    <input type="hidden" name="state" id="state" />
+          		<input type="hidden" name="postcode" id="postcode" />
+                    <input type="hidden" name="BstreetAdd" id="BstreetAdd" />
+                    <input type="hidden" name="Bsuburb" id="Bsuburb" />
+                    <input type="hidden" name="Bstate" id="Bstate" />
+          		<input type="hidden" name="Bpostcode" id="Bpostcode" />
+                    <input type="hidden" name="phone" id="phone" />
+                    <input type="hidden" name="comments" id="comments" />
+               </fieldset>
+            
+               <div id= "payment">
+                    <fieldset>
+                         <legend> <h3>Payment details<img src= "images/card.png" alt="card" title="Payment" /></h3></legend>
+                         <h4>Credit card type</h4>
+                         <p>
+                              <label for="visa">Visa</label> 
+                              <input type="radio" id="visa" name="cardType" value="visa" />
+                         </p>
+                         <p>
+                              <label for="mastercard">Mastercard</label> 
+                              <input type="radio" id="mastercard" name="cardType" value="mastercard"/>
+                         </p>
+                         <p>
+                              <label for="americanExpress">American Express</label> 
+                              <input type="radio" id="americanExpress" name="cardType" value="americanExpress"/>
+                         </p>
+                    
+                         <p>
+                              <label for="nameOnCard">Name on credit card</label> 
+                              <input type="text" name= "nameOnCard" id="nameOnCard" size="40" required="required"/>
+                          </p>
+                    
+                         <p>
+                              <label for="cardNumber">Credit card number</label> 
+                              <input type="text" name= "cardNumber" id="cardNumber" size="19" />
+                         </p>
+                    
+                         <p>
+                              <label for="cardExpiry">Credit card expiry date</label> 
+                              <input type="text" name= "cardExpiry" id="cardExpiry"  placeholder="mm-yy" required="required"/>
+                         </p>
+                    
+                         <p>
+                              <label for="cvv">Card verification value (CVV)</label> 
+                              <input type="text" name= "cvv" id="cvv"  required="required" />
+                         </p>
+                    </fieldset>
+               
+               <input type= "submit" value="Check Out"/>
+               <button type="button" id="cancelButton">Cancel Order</button>
+               </div>
+               </form>
+          </section>
+                    <footer>
+                         <p>101991752</p>
+                         <p>&#169; Penang Airways 2018</p>
+                         <p><em>Ler Yee Ng</em></p>
+                    </footer>
+        </body>
+     </html>

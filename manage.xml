@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="description" content="Receipt" />
+            <meta name="keywords" content="html, css, Manage, flight, airline, booking" />
+            <meta name="author" content="Ler Yee Ng" />
+            <link href="styles/style.css" rel="stylesheet" />
+            <link href="styles/responsive.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+            <title>Penang Airways Official Website: Manage</title>
+        </head>
+        <body>
+           <header>
+    <div id= "Penang">
+    <a href="index.php">
+        <h1>
+            <img src="images/header.png" alt="logo" title="Penang Airways" width="150" height="100" />
+            Penang Airways
+        </h1>
+    </a>
+    </div>
+</header><nav>
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="product.php">Our Flight</a></li>
+        <li><a href="enquire.php">Enquire</a></li>
+        <li><a href="payment.php">Payment</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="enhancements.php">Enhancement</a></li>
+        <li><a href="enhancements2.php">Enhancement 2</a></li>
+        <li><a href="manage.php">Manage</a></li>
+    </ul>
+</nav>            <section class="manage">
+            
+                        
+            <p>SELECT * FROM orders;</p><table>
+<tr>
+<th scope="col">Delete</th>
+<th scope="col">order_id</th>
+<th scope="col">order_cost</th>
+<th scope="col">order_time</th>
+<th scope="col">firstName</th>
+<th scope="col">lastName</th>
+<th scope="col">phone</th>
+<th scope="col">email</th>
+<th scope="col">address</th>
+<th scope="col">trip</th>
+<th scope="col">location_from</th>
+<th scope="col">location_to</th>
+<th scope="col">departure</th>
+<th scope="col">arrival</th>
+<th scope="col">no_passengers</th>
+<th scope="col">comments</th>
+<th scope="col">card_type</th>
+<th scope="col">card_no</th>
+<th scope="col">order_status</th>
+<th scope="col">Edit</th>
+</tr>
+<tr>
+<td><a href='manage.php?id=1'>Delete</a></td>
+<td>1</td>
+<td>880</td>
+<td>2018-10-24</td>
+<td>LerYee</td>
+<td>Ng</td>
+<td>412979660</td>
+<td>ng.leryee@yahoo.com.au</td>
+<td>4/131 Grange Road, Glen Huntly VIC 3163</td>
+<td>return</td>
+<td>Melbourne</td>
+<td>GoldCoast</td>
+<td>2018-11-07</td>
+<td>2018-11-14</td>
+<td>4</td>
+<td></td>
+<td>americanExpress</td>
+<td>***********7792</td>
+<td>pending</td>
+<td><a href='update.php?id=1'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=2'>Delete</a></td>
+<td>2</td>
+<td>387</td>
+<td>2018-10-24</td>
+<td>Jenny</td>
+<td>Lau</td>
+<td>412929682</td>
+<td>J.Lau@hotmail.com.au</td>
+<td>88 Beach Road, Brighton VIC 3088</td>
+<td>one way</td>
+<td>GoldCoast</td>
+<td>Adelaide</td>
+<td>2018-12-20</td>
+<td>0000-00-00</td>
+<td>3</td>
+<td>No dairy</td>
+<td>visa</td>
+<td>************0123</td>
+<td>paid</td>
+<td><a href='update.php?id=2'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=3'>Delete</a></td>
+<td>3</td>
+<td>800</td>
+<td>2018-10-24</td>
+<td>Lewin</td>
+<td>Eddy</td>
+<td>478920378</td>
+<td>Lewin.eddy@gmail.com</td>
+<td>3 Lewin street, Lyneham ACT 0090</td>
+<td>return</td>
+<td>Canberra</td>
+<td>GoldCoast</td>
+<td>2018-12-05</td>
+<td>2018-12-14</td>
+<td>2</td>
+<td></td>
+<td>mastercard</td>
+<td>************0091</td>
+<td>pending</td>
+<td><a href='update.php?id=3'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=4'>Delete</a></td>
+<td>4</td>
+<td>150</td>
+<td>2018-10-25</td>
+<td>Amy</td>
+<td>Smith</td>
+<td>450432334</td>
+<td>Amy.smith078@gmail.com</td>
+<td>75 oceanic drive, Mermaid waters QLD 4231</td>
+<td>one way</td>
+<td>GoldCoast</td>
+<td>Darwin</td>
+<td>2018-10-30</td>
+<td>0000-00-00</td>
+<td>1</td>
+<td></td>
+<td>mastercard</td>
+<td>************9012</td>
+<td>pending</td>
+<td><a href='update.php?id=4'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=5'>Delete</a></td>
+<td>5</td>
+<td>560</td>
+<td>2018-10-25</td>
+<td>WeiZen</td>
+<td>Ng</td>
+<td>413070436</td>
+<td>wz981027@hotmail.com</td>
+<td>21 Glendale Ave, Glen Huntly VIC 3211</td>
+<td>return</td>
+<td>Melbourne</td>
+<td>Perth</td>
+<td>2018-12-18</td>
+<td>2018-12-27</td>
+<td>2</td>
+<td></td>
+<td>visa</td>
+<td>************0127</td>
+<td>pending</td>
+<td><a href='update.php?id=5'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=6'>Delete</a></td>
+<td>6</td>
+<td>140</td>
+<td>2018-10-25</td>
+<td>Phai</td>
+<td>Intathep</td>
+<td>1234567890</td>
+<td>lamtonphai@gmail.com</td>
+<td>29 here home VIC 3000</td>
+<td>one way</td>
+<td>Melbourne</td>
+<td>Canberra</td>
+<td>2018-11-02</td>
+<td>0000-00-00</td>
+<td>1</td>
+<td>Give me discount</td>
+<td>mastercard</td>
+<td>************0091</td>
+<td>fulfilled</td>
+<td><a href='update.php?id=6'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=7'>Delete</a></td>
+<td>7</td>
+<td>720</td>
+<td>2018-10-25</td>
+<td>Vikki</td>
+<td>McDonald</td>
+<td>412229662</td>
+<td>V.mcd23@hotmail.com</td>
+<td>4 Sydney Road, Templestowe NSW 2343</td>
+<td>return</td>
+<td>Hobart</td>
+<td>Perth</td>
+<td>2018-11-06</td>
+<td>2018-11-10</td>
+<td>2</td>
+<td>I need a wheelchair</td>
+<td>americanExpress</td>
+<td>***********0148</td>
+<td>pending</td>
+<td><a href='update.php?id=7'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=8'>Delete</a></td>
+<td>8</td>
+<td>3240</td>
+<td>2018-10-25</td>
+<td>Sam</td>
+<td>Young</td>
+<td>412979660</td>
+<td>Lewin.eddy@gmail.com</td>
+<td>4/131 Grange road Glen Huntly VIC 3000</td>
+<td>return</td>
+<td>Hobart</td>
+<td>Perth</td>
+<td>2018-10-30</td>
+<td>2018-11-01</td>
+<td>9</td>
+<td></td>
+<td>mastercard</td>
+<td>************0091</td>
+<td>pending</td>
+<td><a href='update.php?id=8'>Update</a></td>
+</tr>
+<tr>
+<td><a href='manage.php?id=9'>Delete</a></td>
+<td>9</td>
+<td>880</td>
+<td>2018-10-25</td>
+<td>Ler</td>
+<td>Ng</td>
+<td>412979660</td>
+<td>ng.leryee@yahoo.com.au</td>
+<td>4/131 Grange road Glen Huntly VIC 3164</td>
+<td>return</td>
+<td>Perth</td>
+<td>GoldCoast</td>
+<td>2018-10-30</td>
+<td>2018-11-08</td>
+<td>2</td>
+<td></td>
+<td>americanExpress</td>
+<td>***********0148</td>
+<td>pending</td>
+<td><a href='update.php?id=9'>Update</a></td>
+</tr>
+</table>
+            
+            
+            	<form method="post" action="manage.php">
+                <h4>Display all booking</h4>
+                    <p>
+                            <label for="yes">Yes</label> 
+                            <input type="radio" id="yes" name="showAll" value="yes" required="required" />
+                    </p>
+                    <p>
+                            <label for="no">No, I would like to do a manual search</label> 
+                            <input type="radio" id="no" name="showAll" value="no" />
+                    </p>
+                <fieldset><legend>Manaual Booking search, by entering any field to start:</legend>
+                <p>Display order sort by cost: 
+                            <label for="sortasc">Yes, sort cost ascending </label> 
+                            <input type="radio" id="sortasc" name="sortCost" value="sortasc" required="required"/>
+                            <label for="sortdes">Yes, sort cost descending </label> 
+                            <input type="radio" id="sortdes" name="sortCost" value="sortdes" />
+                            <label for="sortno">No </label> 
+                            <input type="radio" id="sortno" name="sortCost" value="sortno" />
+                 </p>
+                <p class="row">	<label for="orderID">Order id: </label>
+            	<input type="text" name="orderID" id="orderID" /></p>
+                <p class="row">	<label for="firstname">Customer firstname: </label>
+            	<input type="text" name="firstname" id="firstname" /></p>
+                <p class="row">	<label for="lastname">Customer lastname: </label>
+            	<input type="text" name="lastname" id="lastname" /></p>
+                <p><label for="trip">Trip: </label> 
+                                 <select name="trip" id="trip">
+                                   <option value=""> Please Select</option>
+                                   <option value="one way">One way</option>			
+                                   <option value="return">Return</option>	
+                                 </select>
+                </p>
+                 <p><label for="status">Order status: </label> 
+                                 <select name="status" id="status">
+                                   <option value=""> Please Select</option>
+                                   <option value="pending">Pending</option>			
+                                   <option value="fulfilled">Fulfilled</option>
+                                   <option value="paid">Paid</option>
+                                   <option value="archived">Archived</option>	
+                                 </select>
+                </p>
+                <p>	<input type="submit" value="Search Order" /></p>
+                </fieldset>
+            </form>
+            </section>
+            <footer>
+    <p>101991752</p>
+    <p>&#169; Penang Airways 2018</p>
+    <p><a href="mailto:101991752@student.swin.edu.au"><em>Ler Yee Ng</em></a></p>
+</footer>        </body>
+    </html>

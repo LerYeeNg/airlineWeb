@@ -1,0 +1,672 @@
+/*
+ filename:Ler Yee Ng
+ author: Ler Yee Ng
+ created:16/08/208
+ last modified:12/09/2018 
+ description: Assignment 1 css file
+ */
+/*-------------General page design------------*/
+* {
+ color: #D1B02A;
+}
+
+body {
+ margin: 0;
+ padding: 0;
+}
+
+h4{
+ color:#F5F5F5;
+}
+
+p {
+ font-size: 110%;
+}
+
+/*------------header----------- */
+header {
+ background-color: black;
+ padding:5px;
+}
+
+h1{
+ font-size: 36px;
+ font-variant: small-caps;
+ font-family: Georgia, serif;
+}
+
+#Penang {
+ opacity: 0.9;
+}
+
+#Penang:hover{
+ opacity: 1;
+}
+
+/*----------navigation bar layout and design---------- */
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0 0 0 100px;
+ overflow: hidden;
+ background-color: #333;
+}
+
+nav li {
+ float: left;
+}
+
+nav li a {
+ display: block;
+ color: #D1B02A;
+ text-align: center;
+ padding: 14px 16px;
+ border-right: 0.5px dotted #D1B02A;
+ text-decoration: none;
+ width: 144px;
+}
+
+nav li a:hover:not(.active) {
+ background-color: #111;
+}
+
+.active {
+ background-color: #17202A;
+}
+
+/*---------- footer format------------*/
+footer {
+ background-color: black;
+ text-align: center;
+ padding: 10px;
+ clear: both;
+ font-size: small;
+}
+
+footer p {
+  display: inline-block;
+  width: 33%;
+}
+
+footer p:first-child{
+    float: left;
+    text-align: left;
+}
+
+footer p:nth-child(2){
+   text-align: center;
+}
+
+footer p:last-child{
+    float: right;
+    text-align: right;
+}
+
+/*-----------homepage top-----------*/
+.promotion img{
+ width: 100%;
+ height: auto;
+ opacity: 0.9;
+}
+
+.promotion {
+ position: relative;
+ display:flex;
+}
+.promotion h2{
+ text-align: center;
+}
+
+/*--------------text box on image-------------*/
+.topleft {
+ position: absolute;
+ top: 250px;
+ left: 100px;
+ background-color: #111;
+ font-size: 125%;
+ padding-left: 35px;
+ padding-right: 35px;
+ padding-bottom: 35px;
+ opacity: 0.9;
+ max-width: 400px;
+}
+
+.topleft h2{
+ color: gold;
+}
+
+/*button on text box*/
+.button a:link{
+ text-decoration: none;
+}
+
+.button {
+ background-color: #009999;
+ color: white;
+ border: none;
+ padding: 15px 32px;
+ border-radius: 8px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ width: 150px;
+ transition: all 0.5s;
+ margin: 4px 2px;
+ cursor: pointer;
+}
+
+.button span {
+ cursor: pointer;
+ color: white;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -30px;
+  transition: 0.5s;
+}
+
+.button span:hover  {
+ padding-right: 30px;
+}
+
+.button:hover span:after {
+ opacity: 1;
+ right: 0;
+}
+/*------------homepage second part------------*/
+.about h2{
+ padding-top: 40px;
+ text-align: center;
+ font-size: 200%;
+ text-shadow: 0 10px 22px rgba(0,0,0,.5);
+}
+
+.box img{
+ border: 1px dotted #ddd;
+ border-radius: 4px;
+ padding: 5px;
+ width: 50%;
+ display: block;
+ margin: auto;
+ margin-bottom: 30px;
+}
+
+.box {
+ box-sizing: border-box;
+ background: #17202A;
+ border-radius: 4px;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 30px 100px 100px;
+ padding: 50px;
+ font-size: 110%;
+ line-height: 1.25;
+}
+
+/*------------homepage third part-------*/
+.flightService h2{
+ text-align: center;
+ font-size: 200%;
+ text-shadow: 0 10px 22px rgba(0,0,0,.5);
+}
+
+.flightService h3{
+text-align: center;
+}
+
+.flightService {
+ padding-left: 100px;
+ padding-right: 70px;
+}
+
+ #flightService1, #flightService2, #flightService3 {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin: 1em 1em 1em 1em;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #17202A;
+  box-shadow: 0 15px 30px rgba(0,0,0,.5);
+  position: relative;
+}
+
+#flightService2{
+ padding: 25px;
+}
+
+ #flightService1 img{
+  width: 300px;
+  height: 200px;
+  max-width:100%;
+ }
+ 
+ #flightService2 img{
+  width: 300px;
+  height: 200px;
+  max-width:100%;
+ }
+ 
+ #flightService3 img{
+  width: 300px;
+  height: 200px;
+  max-width:100%;
+ }
+ 
+ /*show font when user put mouse on the image, reference from w3schools*/
+ /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_title*/
+ .overlay {
+  position: absolute; 
+  top: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: auto;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+#flightService1:hover .overlay {
+  opacity: 1;
+}
+
+#flightService2:hover .overlay {
+  opacity: 1;
+}
+
+#flightService3:hover .overlay {
+  opacity: 1;
+}
+
+/*------------product page------------*/
+aside:hover{
+    display: block;
+}
+
+aside {
+  border: 3px inset #707070;
+  border-radius: 6px;
+  margin: 50px;
+  padding: 1em;
+  width: 25%;
+  background: 	#F0F0F0;
+  float:right;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  opacity:0.95;
+}
+
+aside a{
+ display: block;
+ text-decoration: none;
+}
+
+aside em{
+ color:#333;
+}
+
+.businessClass, .economyClass, .earlyBird {
+ padding: 20px 100px 100px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}
+
+.economyClass, .earlyBird {
+ border-top:0.5px dotted #D1B02A;
+}
+
+.businessClass h2, .economyClass h2, .earlyBird h2{
+ font-size: 32px;
+ font-variant: small-caps;
+ font-family: Georgia, serif;
+}
+
+.businessClass h3, .economyClass h3, .earlyBird h3{
+ color:silver;
+ padding-top: 40px;
+}
+
+.economyClass img, .earlyBird img{
+ width:80%;
+}
+
+/*promotion table*/
+table {
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+table, th, td {
+    border-bottom: 1px dashed lightgrey;
+    border-top: 1px dashed lightgrey;
+    padding:10px;
+}
+
+.earlyBird th {
+ background: url(images/sky.jpeg);
+ color:#D4E6F1;
+}
+
+.earlyBird td{
+ text-align: center;
+ background: rgb(0, 0, 0);
+ background: rgba(0, 0, 0, 0.5); 
+}
+
+td span{
+ font-size: larger;
+ font-weight: bold;
+ color: #D6DBDF;
+}
+
+/*------------enquire page------------*/
+
+#price:hover{
+    display: block;
+}
+
+#price {
+  border: 1px dashed #D6DBDF;
+  border-radius: 6px;
+  padding: 1em;
+  width: 20%;
+  background: rgba(0, 0, 0, 0.5); 
+  float: none;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  opacity:0.95;
+  text-align: center;
+}
+
+#price p{
+ font-size: 130%;
+}
+
+#enquireForm img, #payment img{
+ width: 60px;
+}
+#enquireForm legend{
+ font-size:130%;
+}
+
+#enquireForm h3, #enquireForm h2, #payment h3{
+ font-size:220%; 
+}
+
+#enquireForm h5{
+ font-size:120%;
+ border: 1px solid #D1B02A;
+ border-radius: 4px;
+ box-sizing: border-box;
+ width: 20%;
+ padding: 12px 20px;
+ margin: 8px 0;
+}
+
+#enquireForm h4, #payment h4{
+ margin-top: -15px;
+ color: #D1B02A;
+ font-size:130%;
+}
+
+#enquireForm {
+ padding: 20px 100px 150px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+ 
+ animation-name: background-1;
+ animation-duration: 4s;
+ animation-iteration-count: 100;
+}
+
+@keyframes background-1 {
+ 0% {background: #283747;}
+ 25%{background: #2F4F4F;}
+ 50%{background: #483D8B;}
+ 100%{background: #556B2F;}
+}
+
+#paymentPage {
+ padding: 20px 100px 150px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}
+
+input[type=text], input[type=email], input[type=date], textarea {
+ width: 50%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ color: black;
+ display: inline-block;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=date]:focus {
+ transition: .5s ease;
+ width: 80%;
+}
+
+select{
+ font-size: 90%;
+ width: 50%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ color:black;
+}
+
+fieldset {
+ border: 1px solid #ccc;
+ border-radius: 8px;
+}
+
+#subfield {
+ border: 0.5px dashed lightgrey;
+ border-radius: 16px;
+}
+
+input[type=submit], input[type=reset], button[type=button]{
+ color: white;
+ border: none;
+ border-radius: 8px;
+ padding: 16px 32px;
+ text-decoration: none;
+ margin: 10px;
+ cursor: pointer;
+ font-size: 90%;
+}
+
+input[type=submit]{
+ background-color: #009999;
+}
+
+input[type=reset], button[type=button] {
+ float: right;
+ background-color: #990000;
+}
+
+/*------------about page-------*/
+/*design the page with border*/
+.me, .reflection, .requirement {
+ padding: 20px 100px 100px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}
+
+.reflection, .requirement {
+ border-top:0.5px dotted #D1B02A;
+}
+
+.me h3, .reflection h3, .requirement h3{
+ color:silver;
+ padding-top: 40px;
+ font-size: 150%;
+}
+
+/*image float right*/
+.me img{
+ width: 25%;
+ float: right;
+ border: groove;
+ padding:20px;
+ background-color: #D6DFD7;
+ margin: 10px;
+}
+/*definition list*/
+#name {
+ font-weight: bold;
+ font-size: 200%;
+}
+
+#name dt {
+ clear: left;
+	float: left;
+ text-align: right;
+ width: 40%;
+}
+
+#name dt::after, dt::after {
+ content: " : ";
+}
+
+#name dd {
+ width: 55%;
+	margin-left: 42%;
+}
+
+.id dt {
+ clear: left;
+	float: left;
+ margin-left: 68%;
+}
+
+.id {
+ font-size: 110%;
+}
+
+#course {
+ color: 	rgb(51, 128, 153);
+}
+
+.me p, .reflection p, .requirement p{
+ text-indent: 50px;
+}
+
+/*Colour the timetable*/
+.INF60012 {
+ background: #339980;
+ color: silver;
+}
+
+.INF60010 {
+ background: #33994d;
+ color: silver;
+}
+
+.INF70005 {
+ background: 	#336699;
+ color: silver;
+}
+
+.COS60004 {
+ background: 	#334d99;
+ color: silver;
+}
+
+.tt th{
+ font-weight: bold;
+ text-align: center;
+ background: #264d73;
+}
+
+/*----enhancement page-------*/
+.enhancement {
+ padding: 20px 100px 500px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}
+
+.enhancement h2{
+ font-size: 32px;
+ font-variant: small-caps;
+ font-family: Georgia, serif;
+}
+
+.enhancement h3{
+ color:silver;
+ font-size: 150%;
+}
+
+.enhancement p{
+ font-size: 120%;
+}
+
+
+.enhancement img{
+ margin-top:20px;
+}
+
+/*---error fix_order.php---*/
+ input[type=text].error ,input[type=email].error, input[type=date].error {
+ width: 50%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ color: black;
+ display: inline-block;
+ border: 2px solid red;
+ border-radius: 4px;
+ box-sizing: border-box;
+}
+
+input[type=text]:focus.error, input[type=email]:focus.error, input[type=date]:focus.error {
+ transition: .5s ease;
+ width: 80%;
+}
+
+/*--receipt--*/
+.receipt {
+ padding: 20px 100px 500px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}
+
+/*--manage--*/
+.manage {
+ padding: 20px 100px 500px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}
+
+/*--update--*/
+.update {
+ padding: 20px 100px 500px;
+ box-sizing: border-box;
+ box-shadow: 0 15px 30px rgba(0,0,0,.5);
+ margin: 0px 100px 0px;
+ background: #283747;
+}

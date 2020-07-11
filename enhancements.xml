@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="description" content="Enhancement" />
+            <meta name="keywords" content="html, css, enhancement, flight, airline, booking" />
+            <meta name="author" content="Ler Yee Ng" />
+            <link href="styles/style.css" rel="stylesheet" />
+            <link href="styles/responsive.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+            <title>Penang Airways Official Website: Enhancement</title>
+        </head>
+        <body>
+            <header>
+                <div id= "Penang">
+                    <a href="index.html">
+                        <h1>
+                            <img src="images/header.png" alt="logo" title="Penang Airways" width="150" height="100" />
+                            Penang Airways
+                        </h1>
+                    </a>
+                </div>
+            </header>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="product.html">Our Flight</a></li>
+                    <li><a href="enquire.html">Enquire</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="enhancements.html">Enhancement</a></li>
+                    <li><a href="enhancements2.html">Enhancement 2</a></li>
+                </ul>
+            </nav>
+            <section class="enhancement">
+                <h2>Enhancement</h2>
+                <h3>Two enhancements have been made in this website:</h3>
+                <p>The first enhancement I made is add an animation to my enquire page background.</p>
+                <p>In order to do that, I searched the method from W3schools to find out the animation section.
+                I used the @keyframes to refer the background I want to use to change the background colour. You can find out the background colour change effect in <a href="enquire.html">Enquire page</a></p>
+                <p>The second enhancemnet is responsive design. This allow user to view the website on any devices. You will be able to see the result on <a href="index.html">Home Page</a> and timetable size in <a href="about.html">About Page</a> by changing the size of the screen via developer tool.
+                The change can be observed by unlink the responsive.css, and you will find the page without the responsive design, the table size in about page will be out of the screen.</p>
+                <p>Additionally, the labels in enquire form are linked to the filling space. I added transition effect to have some interaction with the users when they are filling up the form, the field space will be expand when user clicked on the label. </p>
+            </section>
+            <footer>
+                    <p>101991752</p>
+                    <p><a href="mailto:101991752@student.swin.edu.au"><em>email Ler Yee Ng</em></a></p>
+                    <p>&#169; Penang Airways 2018</p>
+            </footer>
+        </body>
+    </html>
